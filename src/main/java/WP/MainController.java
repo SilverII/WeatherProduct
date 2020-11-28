@@ -24,7 +24,7 @@ public class MainController {
         return view;
     }
 
-    @RequestMapping(value = "/changeSetup", method = RequestMethod.POST)
+    @RequestMapping(value = "/changeApprove", method = RequestMethod.POST)
     public String changeApprove(){
         //записывать в бд изменения дефолтных города и сервиса
         //@RequestParam(value="login") String login, @RequestParam(value="password") String password
