@@ -1,9 +1,17 @@
 package WP;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 //структура бд
 //можно будет вытягивать заданный город и источник по логину
 //а так же сохранять изменения
-public class DataModel {
+@Entity
+public class datamodel {
+    @Id
+    @GeneratedValue
+    private Long id;
     private String login;
     private String password;
     private String city;
@@ -39,5 +47,13 @@ public class DataModel {
 
     public void setSource(String source) {
         this.source = source;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
