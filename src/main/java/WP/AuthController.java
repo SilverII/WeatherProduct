@@ -1,5 +1,6 @@
 package WP;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AuthController {
     private String result;
 
+    @Autowired
+    private dbservice dbservice;
     //поменять возвращаемое значение на вью
     @RequestMapping(value = "/auth", method = RequestMethod.POST)
     public String Auth(){
