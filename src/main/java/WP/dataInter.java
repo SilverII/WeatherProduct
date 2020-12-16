@@ -6,5 +6,5 @@ import org.springframework.data.repository.query.Param;
 
 public interface dataInter extends CrudRepository<datamodel, Long> {
     @Query(value = "SELECT password FROM datamodel WHERE login LIKE '%' || :keyword || '%'")
-    public String search(@Param("keyword") String keyword);
+    public String searchPWbyLogin(@Param("keyword") String keyword);
 }

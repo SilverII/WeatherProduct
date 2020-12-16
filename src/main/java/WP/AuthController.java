@@ -26,8 +26,10 @@ public class AuthController {
         List<datamodel> dM = dbservice.listAll();
         dM.toArray(lgpw);
 
+        String pw = dbservice.searchPWbyLogin("login");
+
         //условие аутентификации
-        if (lgpw[3].contentEquals("password")){
+        if (lgpw[3].contentEquals(pw)){
             //AuthView = new ModelAndView("/");
             MainController mc = new MainController();
             AuthView = mc.MainV(id);

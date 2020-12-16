@@ -28,5 +28,5 @@ public class dbservice {
         dI.deleteById(id);
     }
 
-    //public datamodel getByLogin(String login) {return dI.findById().get();}
+    public String searchPWbyLogin(String login) { return dI.searchPWbyLogin(login); }
 }
