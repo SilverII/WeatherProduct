@@ -12,8 +12,8 @@ public class dbservice {
     @Autowired
     dataInter dI;
 
-    public void save(datamodel customer) {
-        dI.save(customer);
+    public void save(datamodel dm) {
+        dI.save(dm);
     }
 
     public List<datamodel> listAll() {
@@ -27,4 +27,6 @@ public class dbservice {
     public void delete(Long id) {
         dI.deleteById(id);
     }
+
+    //public datamodel getByLogin(String login) {return dI.findById().get();}
 }
