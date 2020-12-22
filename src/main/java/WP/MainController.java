@@ -20,6 +20,13 @@ public class MainController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView MainV(Long id){
         //по логину искать город и сурс
+        datamodel user = dbservice.get(id);
+        String city = user.getCity();
+        String provider = user.getSource();
+
+        //запрос по апи к сервису
+        //парсинг жсон ответа
+        //добавление в вью
 
         return view;
     }
@@ -31,6 +38,8 @@ public class MainController {
         Resourses rss = new Resourses();
         List<Resourses> gc = rss.getCities();
         List<Resourses> gs = rss.getSources();
+        view.addObject("gc", gc);
+        view.addObject("gs", gs);
 
         return view;
     }

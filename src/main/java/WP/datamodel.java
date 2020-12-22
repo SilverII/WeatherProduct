@@ -6,8 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 //структура бд
-//можно будет вытягивать заданный город и источник по логину
-//а так же сохранять изменения
 @Entity
 public class datamodel {
     @Id

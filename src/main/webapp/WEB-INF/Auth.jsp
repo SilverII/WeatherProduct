@@ -12,24 +12,22 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
 </style>
 </head>
 <body>
+<form:form action="Auth" method="post" modelAttribute="lgpw">
 <table>
   <tr>
-    <th>Login: </th>
-    <th>Password: </th>
+    <td>Login: </td>
+    <td><form:input path="login" /></td>
   </tr>
+  <tr>
+    <td>Password: </td>
+    <td><form:input path="password" /></td>
+   </tr>
+   <tr>
+     <td colspan="2"><input type="submit" value="Auth"></td>
+   </tr>
 </table>
 </body>
 </html>

@@ -2,6 +2,7 @@ package WP;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,7 +13,7 @@ import java.util.List;
 @Controller
 public class AuthController {
     private ModelAndView AuthView;
-    String[] lgpw;
+    //String[] lgpw;
     Long id;
 
     @Autowired
@@ -20,16 +21,14 @@ public class AuthController {
 
     //поменять возвращаемое значение на вью
     @RequestMapping(value = "/auth", method = RequestMethod.POST)
-    public ModelAndView Auth(){
-        //тут код запроса к бд
-        //@RequestParam(value="login") String login, @RequestParam(value="password") String password
-        List<datamodel> dM = dbservice.listAll();
-        dM.toArray(lgpw);
-
-        String pw = dbservice.searchPWbyLogin("login");
+    public ModelAndView Auth(@ModelAttribute("lgpwmodel") lgpwmodel lgpw){
+        String login = lgpw.getLogin();
+        String password = lgpw.getPassword();
+        id = dbservice.getIdByLogin(login);
+        String pw = dbservice.searchPWbyLogin(login);
 
         //условие аутентификации
-        if (lgpw[3].contentEquals(pw)){
+        if (password.contentEquals(pw)){
             //AuthView = new ModelAndView("/");
             MainController mc = new MainController();
             AuthView = mc.MainV(id);

@@ -29,4 +29,6 @@ public class dbservice {
     }
 
     public String searchPWbyLogin(String login) { return dI.searchPWbyLogin(login); }
+
+    public Long getIdByLogin(String login) {return dI.getIdByLogin(login);}
 }
