@@ -15,8 +15,13 @@ public class AuthController {
     @Autowired
     private dbservice dbservice;
 
+    @RequestMapping(value="/", method = RequestMethod.GET)
+    public String viewHome(){
+        return "auth";
+    }
+
     //поменять возвращаемое значение на вью
-    @RequestMapping(value = "/auth", method = RequestMethod.POST)
+    @RequestMapping(value = "/authGo", method = RequestMethod.POST)
     public ModelAndView AuthGo(@ModelAttribute("lgpwmodel") lgpwmodel lgpw){
         String login = lgpw.getLogin();
         String password = lgpw.getPassword();
