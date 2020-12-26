@@ -55,4 +55,7 @@ public class datamodel {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public datamodel() {
+    }
 }

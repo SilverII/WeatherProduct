@@ -19,4 +19,7 @@ public class lgpwmodel {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public lgpwmodel() {
+    }
 }
