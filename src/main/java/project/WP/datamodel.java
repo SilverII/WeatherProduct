@@ -1,4 +1,4 @@
-package WP;
+package project.WP;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

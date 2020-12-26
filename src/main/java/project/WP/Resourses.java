@@ -1,4 +1,4 @@
-package WP;
+package project.WP;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package cfg;
+package project.cfg;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;

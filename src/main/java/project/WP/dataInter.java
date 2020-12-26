@@ -1,4 +1,4 @@
-package WP;
+package project.WP;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

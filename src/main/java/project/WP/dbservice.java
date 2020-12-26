@@ -1,4 +1,4 @@
-package WP;
+package project.WP;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

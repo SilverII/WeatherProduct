@@ -1,4 +1,4 @@
-package WP;
+package project.WP;
 
 public class lgpwmodel {
     private String login;
