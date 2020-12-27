@@ -23,7 +23,7 @@ table {
 
         <c:forEach items="${gc}" var="gc">
         <tr>
-            <td><input type="radio" id="ct" name="Cities" value="${gc}">${gc}</td>
+            <td><input type="radio" id="ct" name="City" value="${gc}">${gc}</td>
         </tr>
         </c:forEach>
 
@@ -35,7 +35,7 @@ table {
 
         <c:forEach items="${gs}" var="gs">
         <tr>
-            <td><input type="radio" id="rs" name="Resources" value="${gs}">${gs}</td>
+            <td><input type="radio" id="rs" name="Resource" value="${gs}">${gs}</td>
         </tr>
         </c:forEach>
 
