@@ -10,12 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Controller
 public class MainController {
     @Autowired
-    private dbservice dbservice;
+    dbservice dbservice;
     /*private Long ids;
     private String login;*/
 

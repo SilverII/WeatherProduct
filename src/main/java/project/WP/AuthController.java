@@ -13,7 +13,7 @@ public class AuthController {
     Long id;
 
     @Autowired
-    private dbservice dbservice;
+    dbservice dbservice;
 
     @RequestMapping(value="/", method = RequestMethod.GET)
     public String viewHome(){
