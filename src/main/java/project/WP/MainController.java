@@ -16,17 +16,21 @@ import java.util.Objects;
 public class MainController {
     @Autowired
     private dbservice dbservice;
+    /*private Long ids;
+    private String login;*/
 
     //принимать логин с аутентификации
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public ModelAndView MainV(Long id){
         ModelAndView view = new ModelAndView("index");
+        //ids = id;
 
         //по логину искать город и сурс
         List<String[]> gs = new Resourses().getSources();
         datamodel user = dbservice.get(id);
         String city = user.getCity();
         String provider = user.getSource();
+        //login = user.getLogin();
         if (provider.contentEquals("link1")) {provider = gs.get(1)[1]+city+gs.get(1)[2];}
         if (provider.contentEquals("link2")) {provider = gs.get(2)[1]+city+gs.get(2)[2];}
 
@@ -67,6 +71,10 @@ public class MainController {
         if (dm.getCity().contentEquals("MSK")) {dm.setCity("524894");}
         if (dm.getCity().contentEquals("SPB")) {dm.setCity("498817");}
         if (dm.getCity().contentEquals("EKB")) {dm.setCity("1486209");}
+
+        /*dm.setId(ids);
+        dm.setLogin(login);*/
+
         //записывать в бд изменения дефолтных города и сервиса
         dbservice.save(dm);
 

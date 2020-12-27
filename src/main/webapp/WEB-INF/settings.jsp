@@ -20,21 +20,25 @@ table {
         <tr>
             <th>City</th>
         </tr>
+
         <c:forEach items="${gc}" var="gc">
         <tr>
-            <td>${gc}</td>
+            <td><input type="radio" id="ct" name="Cities" value="${gc}">${gc}</td>
         </tr>
         </c:forEach>
+
 </table>
 <table border="1" cellpadding="5">
         <tr>
             <th>Resourse</th>
         </tr>
+
         <c:forEach items="${gs}" var="gs">
         <tr>
-            <td>${gs}</td>
+            <td><input type="radio" id="rs" name="Resources" value="${gs}">${gs}</td>
         </tr>
         </c:forEach>
+
 </table>
 <td>
         <a href="/save">Save</a>
