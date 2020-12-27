@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.persistence.EntityManagerFactory;
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"project/"})
+@EnableJpaRepositories(basePackages = {"project.WP"})
 @EnableTransactionManagement
 public class DBconfig {
     @Bean

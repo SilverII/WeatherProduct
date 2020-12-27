@@ -15,14 +15,14 @@ table {
 </style>
 </head>
 <body>
-<form:form action="/changeSetup" method="get" modelAttribute="Resourses">
+<form:form action="/changeSetup" method="get" modelAttribute="String">
 <table border="1" cellpadding="5">
         <tr>
             <th>City</th>
         </tr>
         <c:forEach items="${gc}" var="gc">
         <tr>
-            <td>${gc.City}</td>
+            <td>${gc}</td>
         </tr>
         </c:forEach>
 </table>
@@ -32,7 +32,7 @@ table {
         </tr>
         <c:forEach items="${gs}" var="gs">
         <tr>
-            <td>${gs.Sources}</td>
+            <td>${gs}</td>
         </tr>
         </c:forEach>
 </table>

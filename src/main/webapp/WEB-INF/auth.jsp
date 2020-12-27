@@ -26,7 +26,7 @@ table {
     <td><form:input path="password" /></td>
    </tr>
    <tr>
-     <td colspan="2"><input type="submit" value="AuthGo"></td>
+     <td colspan="2"><input type="submit" value="authGo"></td>
    </tr>
 </table>
 </body>

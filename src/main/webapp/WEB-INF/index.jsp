@@ -15,28 +15,34 @@ table {
 </style>
 </head>
 <body>
-<form:form action="/" method="get" modelAttribute="datamodel">
+
+<script type="text/javascript">
+    setInterval(location.reload, 180000)
+</script>
+
+<form:form action="/main" method="get" modelAttribute="datamodel">
+<c:set var="login" value="${login}"/>
+<c:set var="city" value="${city}"/>
+<c:set var="temp" value="${temp}"/>
+<c:set var="press" value="${pressure}"/>
+<c:set var="wind" value="${wind_speed}"/>
+
 <table border="1" cellpadding="5">
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>E-mail</th>
-            <th>Address</th>
-            <th>Action</th>
+            <th>Login</th>
+            <th>City</th>
+            <th>Temp</th>
+            <th>Pressure</th>
+            <th>Wind speed</th>
         </tr>
-        <c:forEach items="${listCustomer}" var="customer">
         <tr>
-            <td>${customer.id}</td>
-            <td>${customer.name}</td>
-            <td>${customer.email}</td>
-            <td>${customer.address}</td>
-            <td>
-                <a href="/edit?id=${customer.id}">Edit</a>
-
-                <a href="/delete?id=${customer.id}">Delete</a>
-            </td>
+            <td>${login}</td>
+            <td>${city}</td>
+            <td>${temp}</td>
+            <td>${press}</td>
+            <td>${wind}</td>
         </tr>
-        </c:forEach>
     </table>
+    <h3><a href="/changeSetup">Change Settings</a></h3>
 </body>
 </html>

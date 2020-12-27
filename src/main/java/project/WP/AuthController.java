@@ -36,7 +36,7 @@ public class AuthController {
             return AuthView;
         }
         else {
-            AuthView = new ModelAndView("/err");
+            AuthView = new ModelAndView("err");
             return AuthView;
         }
     }
